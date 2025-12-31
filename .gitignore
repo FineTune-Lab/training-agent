@@ -1,97 +1,65 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
-
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# env files (can opt-in for committing if needed)
-.env*
-
-# python
-.venv/
-venv/
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
-# training artifacts
-/lib/training/trainer_venv/
-/lib/training/test_venv/
-/lib/training/tokenized_cache/
-/lib/training/logs/
-/lib/training/llama.cpp/
-/lib/training/__pycache__/
+# Virtual Environment
+venv/
+env/
+ENV/
 
-# graphiti (large dependencies - keep venv and pycache ignored)
-/graphiti-wrapper/venv/
-/graphiti-wrapper/__pycache__/
-/graphiti-wrapper/.env
-/graphiti-main/
+# Environment variables
+.env
 
-# llmops widget build
-/lib/llmops-widget/
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
 
-# research outputs
-/research/dpo_production_output/
-/research/multiturn_sft_output/
-/research/test_results/
+# Models and Data
+models/
+datasets/
+checkpoints/
+*.pth
+*.bin
+*.safetensors
 
-# generated data
-/output/
-
-# temp files
-/supabase/.temp/
+# Logs
+logs/
 *.log
-*.log?
-*.tar.gz
 
-# vercel
-.vercel
+# OS
+.DS_Store
+Thumbs.db
 
-# files with secrets (detected by GitHub)
-SECURITY_AUDIT_CRITICAL.md
-scripts/add-secrets-via-api.ps1
-scripts/add-secrets.mjs
-test_hf_token_resolution.js
-test_provider_secret_decrypt.js
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
-lib/training/configs/job_*.json
+# Jupyter
+.ipynb_checkpoints/
 
-# SDK build artifacts (published to npm - don't commit generated files)
-packages/*/dist/
-packages/*/build/
-packages/*/node_modules/
-!packages/*/node_modules/.package-lock.json
-
-# Python package build artifacts (published to PyPI - don't commit generated files)
-python-package/dist/
-python-package/build/
-python-package/*.egg-info/
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json

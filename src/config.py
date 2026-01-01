@@ -11,6 +11,13 @@ class Settings(BaseSettings):
 
     # Backend Configuration
     backend_url: str = "http://localhost:3000"
+    api_key: str
+
+    # Worker Identification
+    worker_hostname: Optional[str] = None
+    worker_platform: Optional[str] = None
+    worker_version: str = "0.1.3"
+    worker_capabilities: list[str] = ["training"]
 
     # Server Configuration
     host: str = "0.0.0.0"
